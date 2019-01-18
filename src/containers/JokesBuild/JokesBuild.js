@@ -1,9 +1,14 @@
 import React, {Component} from 'react';
 import Jokes from '../../components/Jokes/Jokes'
+import Button from "../../components/Button/Button";
 
 class JokesBuild extends Component {
     state = {
         jokeText: ''
+    };
+
+    refreshJoke = () => {
+        this.componentDidMount()
     };
 
     componentDidMount() {
@@ -29,7 +34,11 @@ class JokesBuild extends Component {
                 <Jokes
                     value={this.state.jokeText}
                 />
+                <Button
+                    onClick={() => this.refreshJoke()}
+                />
             </div>
+
         );
     }
 }
