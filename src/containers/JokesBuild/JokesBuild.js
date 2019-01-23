@@ -28,6 +28,7 @@ class JokesBuild extends Component {
     }
 
     render() {
+        console.log('update page')
         return (
             <div className="JokesWrap">
                 <h2>Jokes about Chuck Norris</h2>
